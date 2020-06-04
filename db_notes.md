@@ -120,6 +120,7 @@ Redis is an in-memory database, which in turn makes it ridicously fast, but also
 Neo4j is a Graph database that much like the other no-sql databases is very fast, espcially when it comes to fetching a single entry. The graph structure comes with meaningful relation describtions which makes it a very strong analytic tool as well. Often revealing patterns or relations that otherwise wasn't obvious to the human eye.
 
 ### HBase
+[HBase](https://www.youtube.com/watch?v=VRD775iqAko) is a key/value store, column oriented, unlike most dabatases which are row oriented. HBase excells at storing massive amounts of data, and easily scalable.
 
 ## <a name="sacling"></a>[Scaling](https://www.youtube.com/watch?v=NdZ3y6jK_Sc)
 Scaling a database might be needed if the demands or the request going to towards the database excedes the amount it can handle. Hence a need to scale the database in one form another becomes relevant
