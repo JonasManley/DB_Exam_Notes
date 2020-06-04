@@ -1,5 +1,6 @@
 # DB Exam notes
 ## <a name="overview"></a>Overview
+- [Question Sheet](#qa)
 - [CAP theorem](#cap)
 - [ACID](#acid)
 - [SQL](#sql)
@@ -8,6 +9,21 @@
 - [Sharding](#sharding)
 - [Clustering](#clustering)
 - [Load balancer](#load-balancer)
+
+## <a name="qa"></a> Sample QA
+With off set in the sample questions, some of the quesations aren't (in)directly answered in this file, and instead answered directly here.
+
+### The difference between data, information and dbms
+>Explain the following terms: data, information, database, and database management system. What is the difference? Give examples.
+<ul>
+    <li>Data is raw, unorganized facts that needs to the processed. For example, a name, a price tag, a currency, an material list.</li>
+    <li>Information can be derivived from organized and structured data. For example, taking the data points from the data example, and put them in context of a clothing product. I.e a t-shirt made from wool, at the price of x dkk.</li>
+    <li>A database is collection of data.</li>
+    <li>A Database Management System (DBMS) is software that allows developers to manage and create databases.</li>
+</ul>
+
+### Concurency problem
+The concurency problem happens in a multi user enviroment. It can happen for a couple of reasons, but can also be handled. Basically when two or more users accesses or modifies the same data, how do we decide which data is valid? A good example of businesses actively combatting this problem is ticket sales of all sorts. Because there's only a limited quantity of tickets available, at a given date, and even worse, you might want to reserve a seat, in a cinema for example. The way around this, is a limited time period where you can access and modify the data. Then the system makes sure that users accessing the site is either denied read/write cababilities, or only allowed access if the data is up to data, and noone else is modifying it.
 
 ## <a name="cap"></a>[CAP theorem](https://www.youtube.com/watch?v=K12oQCzjPxE)
 >[The CAP theorem (also called Brewer’s theorem) states that a distributed database system can only guarantee two out of these three characteristics: Consistency, Availability, and Partition Tolerance.](https://www.educative.io/edpresso/what-is-the-cap-theorem?aid=5082902844932096&utm_source=google&utm_medium=cpc&utm_campaign=edpresso-dynamic&gclid=CjwKCAjwt-L2BRA_EiwAacX32U1o9IADYBvniu-c5OThygO2jCX9aHkP-yRsctQRV_eftlWPunhRfRoCrVkQAvD_BwE)
@@ -86,6 +102,12 @@ Written data will not be lost.
 
 
 ## <a name="no-sql"></a>No-SQL
+>Broadly, [NoSQL](https://www.sciencedirect.com/topics/computer-science/neo4j) databases have been classified into four subcategories:<ol>
+    <li>Key-value pairs. This model is implemented using a hash table where there is a unique key and a pointer to a particular item of data creating a key-value pair; for example, Voldemort.</li>
+    <li>Column family stores. An extension of the key-value architecture with columns and column families, the overall goal was to process distributed data over a pool of infrastructure; for example, HBase and Cassandra.</li>
+    <li>Document databases. tThis class of databases is modeled after Lotus Notes and similar to key-value stores. The data is stored as a document and is represented in JSON or XML formats. The biggest design feature is the flexibility to list multiple levels of key-value pairs; for example, Riak and CouchDB.</li>
+    <li>Graph databases. Based on the graph theory, this class of database supports the scalability across a cluster of machines. The complexity of representation for extremely complex sets of documents is evolving; for example, Neo4J.</li>
+</ol>
 
 
 ### MongoDB
